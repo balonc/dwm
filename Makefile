@@ -37,8 +37,6 @@ dist: clean
 	rm -rf dwm-${VERSION}
 
 install: all
-	mkdir -p ~/.config/dwm
-	cp -f autostart.sh ~/.config/dwm/autostart.sh
 	mkdir -p ${DESTDIR}${PREFIX}/bin
 	cp -f dwm ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
