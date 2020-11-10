@@ -5,7 +5,7 @@ numlockx
 feh --bg-scale background.png
 urxvtd -q &
 dunst &
-xautolock -time 15 -notify 5 -notifier '/usr/lib/xsecurelock/until_nonidle /usr/lib/xsecurelock/dimmer' -locker xsecurelock &
+#xautolock -time 15 -notify 5 -notifier '/usr/lib/xsecurelock/until_nonidle /usr/lib/xsecurelock/dimmer' -locker xsecurelock &
 
 while true; do
     #xsetroot -name "Bat:$(acpi | awk '{print $4}' | tr -d \,)   $(date +"%H:%M")"
@@ -16,6 +16,6 @@ while true; do
 	notify-send --expire-time=5000 --urgency=critical "critical battery status. Now $($STATUS),$($BATT)%"
     fi
 
-    xsetroot -name "Brightness:$(brightnessctl --device=intel_backlight g)/$(brightnessctl --device=intel_backlight m)   Volume:$(pamixer --get-volume-human)  Battery: $STATUS,$BATT%  $(date +"%H:%M")"
+    xsetroot -name "Brightness:$(brightnessctl --device=intel_backlight g)/$(brightnessctl --device=intel_backlight m) Volume:$(pamixer --get-volume-human) Battery: $STATUS,$BATT%  $(date +"%H:%M")"
     sleep 2
 done
