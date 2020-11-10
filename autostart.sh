@@ -14,11 +14,11 @@ while true; do
 
     if ([ $BATT -le 20] && [ $STATUS == 'Discharging' ]); then
 	notify-send --expire-time=5000 --urgency=normal "low [-20%] battery status. Now $($STATUS),$($BATT)%"
-    elif ([ $BATT -le 15] && [ $STATUS == 'Discharging' ]);
+    elif ([ $BATT -le 15] && [ $STATUS == 'Discharging' ]); then
 	 notify-send --expire-time=5000 --urgency=critical "critical [-15%] battery status. Now $($STATUS),$($BATT)%"
-    elif ([ $BATT -le 10] && [ $STATUS == 'Discharging']);
+    elif ([ $BATT -le 10] && [ $STATUS == 'Discharging']); then
 	 notify-send --expire-time=5000 --urgency=critical "critical [-10%] battery status. Now $($STATUS),$($BATT)%"
-    elif ([ $BATT -le 5] && [ $STATUS == 'Discharging']);
+    elif ([ $BATT -le 5] && [ $STATUS == 'Discharging']); then
 	 notify-send --expire-time=5000 --urgency=critical "critical [-5%] battery status. Now $($STATUS),$($BATT)%"
     fi
 
