@@ -1399,7 +1399,7 @@ run(void)
 
 void
 runAutostart(void) {
-  system("cd ~/.config/dwm; ./autostart.sh &");
+  system("cd ~/.config/dwm; ./init.sh &");
 }
 
 
