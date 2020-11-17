@@ -22,6 +22,6 @@ while true; do
 #	 notify-send --expire-time=5000 --urgency=critical "critical [-5%] battery status. Now $($STATUS),$($BATT)%"
 #    fi
 
-    xsetroot -name "Brightness:$(brightnessctl --device=intel_backlight g)/$(brightnessctl --device=intel_backlight m) Volume:$(pamixer --get-volume-human) Battery: $STATUS,$BATT%  $(date +"%H:%M")"
+    xsetroot -name "b:$(brightnessctl --device=intel_backlight g)/$(brightnessctl --device=intel_backlight m), v:$(pamixer --get-volume-human), e:$STATUS,$BATT%  $(date +"%H:%M")"
     sleep 2
 done
