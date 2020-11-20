@@ -12,15 +12,19 @@ while true; do
     STATUS=$( acpi -b | sed 's/.*: \([a-zA-Z]*\),.*/\1/gi' )
     BRIGHTNESS=$( brightnessctl --device=intel_backlight g )
     BRIGHTNESS_TOTAL=$( brightnessctl --device=intel_backlight m )
+    BRIGHTNESS_PERC=$( bc <<< "scale=2;$BRIGHTNESS/$BRIGHTNESS_TOTAL*100" )
+    BRIGHTNESS_PERC_PRINT=${BRIGHTNESS_PERC%.*}
     VOLUME=$( pamixer --get-volume-human ) 
     DATETIME=$( date +"%H:%M" )
 
+    echo per=$int
+
     if [ "${BATT}" -le 15 ] && [ "${STATUS}" == "Discharging" ]; then
-        xsetroot -name "b:$BRIGHTNESS/$BRIGHTNESS_TOTAL, v:$VOLUME, ^c#ffffff^^b#e5211d^ϟ:$STATUS,$BATT%^d^  $DATETIME";
+        xsetroot -name "b:$BRIGHTNESS_PERC_PRINT%, v:$VOLUME, ^c#ffffff^^b#e5211d^ϟ:$STATUS,$BATT%^d^  $DATETIME";
     elif [ "${BATT}" -le 30 ] && [ "${STATUS}" == "Discharging" ]; then
-        xsetroot -name "b:$BRIGHTNESS/$BRIGHTNESS_TOTAL, v:$VOLUME, ^c#151515^^b#d2dd30^ϟ:$STATUS,$BATT%^d^  $DATETIME";
+        xsetroot -name "b:$BRIGHTNESS_PERC_PRINT%, v:$VOLUME, ^c#151515^^b#d2dd30^ϟ:$STATUS,$BATT%^d^  $DATETIME";
     else
-        xsetroot -name "b:$BRIGHTNESS/$BRIGHTNESS_TOTAL, v:$VOLUME, ϟ:$STATUS,$BATT%  $DATETIME";
+        xsetroot -name "b:$BRIGHTNESS_PERC_PRINT%, v:$VOLUME, ϟ:$STATUS,$BATT%  $DATETIME";
     fi
 
     sleep 2
