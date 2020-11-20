@@ -13,11 +13,10 @@ while true; do
     BRIGHTNESS=$( brightnessctl --device=intel_backlight g )
     BRIGHTNESS_TOTAL=$( brightnessctl --device=intel_backlight m )
     BRIGHTNESS_PERC=$( bc <<< "scale=2;$BRIGHTNESS/$BRIGHTNESS_TOTAL*100" )
-    BRIGHTNESS_PERC_PRINT=${BRIGHTNESS_PERC%.*}
     VOLUME=$( pamixer --get-volume-human ) 
     DATETIME=$( date +"%H:%M" )
 
-    S_BRIGHTNESS="b:$BRIGHTNESS_PERC_PRINT%"
+    S_BRIGHTNESS="b:${BRIGHTNESS_PERC%.*}%"
     S_VOLUME="v:$VOLUME"
     S_BATTERY="ϟ:$STATUS,$BATT%"
     S_DATETIME="$DATETIME"
