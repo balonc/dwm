@@ -17,12 +17,12 @@ while true; do
     VOLUME=$( pamixer --get-volume-human ) 
     DATETIME=$( date +"%H:%M" )
 
-    echo per=$int
-
     if [ "${BATT}" -le 15 ] && [ "${STATUS}" == "Discharging" ]; then
         xsetroot -name "b:$BRIGHTNESS_PERC_PRINT%, v:$VOLUME, ^c#ffffff^^b#e5211d^ϟ:$STATUS,$BATT%^d^  $DATETIME";
     elif [ "${BATT}" -le 30 ] && [ "${STATUS}" == "Discharging" ]; then
         xsetroot -name "b:$BRIGHTNESS_PERC_PRINT%, v:$VOLUME, ^c#151515^^b#d2dd30^ϟ:$STATUS,$BATT%^d^  $DATETIME";
+    elif [ "${BATT}" == 100 ] && [ "${STATUS}" == "Charging" ]; then
+        xsetroot -name "b:$BRIGHTNESS_PERC_PRINT%, v:$VOLUME, ^c#151515^^b#1b9104^ϟ:$STATUS,$BATT%^d^  $DATETIME";
     else
         xsetroot -name "b:$BRIGHTNESS_PERC_PRINT%, v:$VOLUME, ϟ:$STATUS,$BATT%  $DATETIME";
     fi
