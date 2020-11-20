@@ -11,12 +11,12 @@ while true; do
     BATT=$( acpi -b | sed 's/.*[charging|unknown], \([0-9]*\)%.*/\1/gi' )
     STATUS=$( acpi -b | sed 's/.*: \([a-zA-Z]*\),.*/\1/gi' )
 
-    if [ "${BATT}" -le 25 ] && [ "${STATUS}" == "Discharging" ]; then
-        xsetroot -name "b:$(brightnessctl --device=intel_backlight g)/$(brightnessctl --device=intel_backlight m), v:$(pamixer --get-volume-human), ^c#151515^^b#d2dd30^e:$STATUS,$BATT%^d^  $(date +"%H:%M")"
-    elif [ "${BATT}" -le 15 ] && [ "${STATUS}" == "Discharging" ]; then
-        xsetroot -name "b:$(brightnessctl --device=intel_backlight g)/$(brightnessctl --device=intel_backlight m), v:$(pamixer --get-volume-human), ^c#ffffff^^b#e5211d^e:$STATUS,$BATT%^d^  $(date +"%H:%M")"
-    else 
-        xstroot -name "b:$(brightnessctl --device=intel_backlight g)/$(brightnessctl --device=intel_backlight m), v:$(pamixer --get-volume-human), e:$STATUS,$BATT%  $(date +"%H:%M")"
+    if [ "${BATT}" -le 15 ] && [ "${STATUS}" == "Discharging" ]; then
+        xsetroot -name "b:$(brightnessctl --device=intel_backlight g)/$(brightnessctl --device=intel_backlight m), v:$(pamixer --get-volume-human), ^c#ffffff^^b#e5211d^e:$STATUS,$BATT%^d^  $(date +"%H:%M")";
+    elif [ "${BATT}" -le 25 ] && [ "${STATUS}" == "Discharging" ]; then
+        xsetroot -name "b:$(brightnessctl --device=intel_backlight g)/$(brightnessctl --device=intel_backlight m), v:$(pamixer --get-volume-human), ^c#151515^^b#d2dd30^e:$STATUS,$BATT%^d^  $(date +"%H:%M")";
+    else
+        xsetroot -name "b:$(brightnessctl --device=intel_backlight g)/$(brightnessctl --device=intel_backlight m), v:$(pamixer --get-volume-human), e:$STATUS,$BATT%  $(date +"%H:%M")";
     fi
 
     sleep 2
