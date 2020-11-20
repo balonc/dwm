@@ -17,15 +17,20 @@ while true; do
     VOLUME=$( pamixer --get-volume-human ) 
     DATETIME=$( date +"%H:%M" )
 
+    S_BRIGHTNESS="b:$BRIGHTNESS_PERC_PRINT%"
+    S_VOLUME="v:$VOLUME"
+    S_BATTERY="ϟ:$STATUS,$BATT%"
+    S_DATETIME="$DATETIME"
+
     if [ "${BATT}" -le 15 ] && [ "${STATUS}" == "Discharging" ]; then
-        xsetroot -name "b:$BRIGHTNESS_PERC_PRINT%, v:$VOLUME, ^c#ffffff^^b#e5211d^ϟ:$STATUS,$BATT%^d^  $DATETIME";
+        S_BATTERY="^c#ffffff^^b#e5211d^ϟ:$STATUS,$BATT%^d^"
     elif [ "${BATT}" -le 30 ] && [ "${STATUS}" == "Discharging" ]; then
-        xsetroot -name "b:$BRIGHTNESS_PERC_PRINT%, v:$VOLUME, ^c#151515^^b#d2dd30^ϟ:$STATUS,$BATT%^d^  $DATETIME";
+        S_BATTERY="^c#151515^^b#d2dd30^ϟ:$STATUS,$BATT%^d^"
     elif [ "${BATT}" == 100 ] && [ "${STATUS}" == "Charging" ]; then
-        xsetroot -name "b:$BRIGHTNESS_PERC_PRINT%, v:$VOLUME, ^c#151515^^b#1b9104^ϟ:$STATUS,$BATT%^d^  $DATETIME";
-    else
-        xsetroot -name "b:$BRIGHTNESS_PERC_PRINT%, v:$VOLUME, ϟ:$STATUS,$BATT%  $DATETIME";
+        S_BATTERY="^c#151515^^b#1b9104^ϟ:$STATUS,$BATT%^d^"
     fi
+
+    xsetroot -name "$S_BRIGHTNESS, $S_VOLUME, $S_BATTERY, $S_DATETIME";
 
     sleep 2
 done
