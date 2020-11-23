@@ -10,7 +10,7 @@ dunst &
 CYAN="#005677"
 GREEN="#008A33"
 RED="#be2100"
-YELLOW="be8700"
+YELLOW="#be8700"
 WHITE="#ffffff"
 BLACK="#151515"
 
