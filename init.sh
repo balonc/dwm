@@ -12,7 +12,7 @@ GREEN="#008A33"
 RED="#be2100"
 YELLOW="#be8700"
 WHITE="#ffffff"
-BLACK="#151515"
+BLACK="#000000"
 
 while true; do
     BATT=$( acpi -b | sed 's/.*[charging|unknown], \([0-9]*\)%.*/\1/gi' )
@@ -28,12 +28,14 @@ while true; do
     S_BATTERY="ϟ:$STATUS,$BATT%"
     S_DATETIME="$DATETIME"
 
-    if [ "${BATT}" -le 15 ] && [ "${STATUS}" == "Discharging" ]; then
+    if [ "${BATT}" -le 4 ] && [ "${STATUS}" == "Discharging" ]; then
+        systemctl hibernate
+    elif [ "${BATT}" -le 15 ] && [ "${STATUS}" == "Discharging" ]; then
         S_BATTERY="^c$WHITE^^b$RED^ϟ:$STATUS,$BATT%^d^"
     elif [ "${BATT}" -le 30 ] && [ "${STATUS}" == "Discharging" ]; then
         S_BATTERY="^c$BLACK^^b$YELLOW^ϟ:$STATUS,$BATT%^d^"
     elif [ "${STATUS}" == "Full" ]; then
-        S_BATTERY="^c$BLACK^^b$CYAN^ϟ:$STATUS^d^"
+        S_BATTERY="^c$WHITE^^b$CYAN^ϟ:$STATUS^d^"
     elif [ "${STATUS}" == "Charging" ]; then
         S_BATTERY="^c$BLACK^^b$GREEN^ϟϟ:$STATUS,$BATT%^d^"
     fi
