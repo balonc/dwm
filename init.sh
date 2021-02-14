@@ -5,7 +5,7 @@ numlockx
 feh --bg-scale background.png
 urxvtd -q &
 dunst &
-xautolock -time 10 -locker slock
+xautolock -time 10 -locker slock &
 
 CYAN="#005677"
 GREEN="#008A33"
