@@ -5,7 +5,7 @@ numlockx
 feh --bg-scale background.png
 urxvtd -q &
 dunst &
-#xautolock -time 15 -notify 5 -notifier '/usr/lib/xsecurelock/until_nonidle /usr/lib/xsecurelock/dimmer' -locker xsecurelock &
+xautolock -time 10 -locker slock
 
 CYAN="#005677"
 GREEN="#008A33"
