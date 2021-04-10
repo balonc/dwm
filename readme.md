@@ -14,12 +14,12 @@ dwm draws a small customizable border around windows to indicate the focus state
 
 In contrast to ion, larswm, and wmii, dwm is much smaller, faster and simpler.
 
-*dwm has no Lua integration, no 9P support, no shell-based configuration, no remote control, and comes without any additional tools, such as for printing the selection or warping the mouse.
-*dwm is only a single binary, and its source code is intended to never exceed 2000 SLOC.
-*dwm doesn't distinguish between layers: there is no floating or tiled layer. Whether or not the clients of currently selected tag(s) are in tiled layout, you can rearrange them on the fly. Popup and fixed-size windows are always floating, however.
-*dwm is customized through editing its source code, which makes it extremely fast and secure - it does not process any input data which isn't known at compile time, except window titles and status text read from the root window's name. You don't have to learn Lua/sh/ruby or some weird configuration file format (like X resource files), beside C, to customize it for your needs: you only have to learn C (at least in order to edit the header file).
-*Because dwm is customized through editing its source code, it's pointless to make binary packages of it. This keeps its userbase small and elitist. No novices asking stupid questions. There are some distributions that provide binary packages though.
-*dwm reads from the root window's name to print arbitrary status text (like the date, load, battery charge). That's much simpler than larsremote, wmiir and what not...
+* dwm has no Lua integration, no 9P support, no shell-based configuration, no remote control, and comes without any additional tools, such as for printing the selection or warping the mouse.
+* dwm is only a single binary, and its source code is intended to never exceed 2000 SLOC.
+* dwm doesn't distinguish between layers: there is no floating or tiled layer. Whether or not the clients of currently selected tag(s) are in tiled layout, you can rearrange them on the fly. Popup and fixed-size windows are always floating, however.
+* dwm is customized through editing its source code, which makes it extremely fast and secure - it does not process any input data which isn't known at compile time, except window titles and status text read from the root window's name. You don't have to learn Lua/sh/ruby or some weird configuration file format (like X resource files), beside C, to customize it for your needs: you only have to learn C (at least in order to edit the header file).
+* Because dwm is customized through editing its source code, it's pointless to make binary packages of it. This keeps its userbase small and elitist. No novices asking stupid questions. There are some distributions that provide binary packages though.
+* dwm reads from the root window's name to print arbitrary status text (like the date, load, battery charge). That's much simpler than larsremote, wmiir and what not...
 *dwm creates a view for each Xinerama screen.
 
 # customisation
@@ -42,33 +42,33 @@ Some will argue that you should setup a different static workspace for each of t
 For example: the layout you use during debugging would probably be quite different to the one used during refactoring, you might want to have a patch someone emailed you in view while you look at some code, or edit a configuration file while you look at a man page or website. Dynamic window management lets you mix and match on the fly to always have the windows you need in view, and only the windows you need, without the need to reserve extra space which you may or may not end up using.
 
 # used patches
-*autostart
+* autostart
 
 This patch will make dwm run "~/.dwm/autostart_blocking.sh" and "~/.dwm/autostart.sh &" before entering the handler loop. One or both of these files can be ommited.
 
 Be aware that dwm will not startup as long as autostart_blocking.sh is running and will stay completely unresponsive. For obvious reasons it is generally a bad idea to start X-applications here :)
 
-*titlecolor
+* titlecolor
 
 Adds a new color scheme used by the window title in the bar, so that its colors (foreground and background) can be changed independently.
 
-*actualfullscreen
+* actualfullscreen
 
 Actually toggle fullscreen for a window, instead of toggling the status bar and the monocle layout.
 
-*noborder
+* noborder
 
 Remove the border when there is only one window visible, checking if the layout is floating before hiding the border.
 
-*status2d
+* status2d
 
 Status2d allows colors and rectangle drawing in your DWM status bar. See below an example of my status bar with multi-cpu and battery.
 
-*pertag
+* pertag
 
 More general approach to taglayouts patch. This patch keeps layout, mwfact, barpos and nmaster per tag.
 
-*swallow
+* swallow
 
 This patch adds "window swallowing" to dwm as known from Plan 9's windowing system rio.
 
@@ -76,6 +76,6 @@ Clients marked with isterminal in config.h swallow a window opened by any child 
 
 This patch helps users spawning a lot of graphical programs from their command line by avoiding cluttering the screen with many unusable terminals. Being deep down in a directory hierarchy just does not make the use of dmenu feasible.
 
-*movestack
+* movestack
 
 This plugin allows you to move clients around in the stack and swap them with the master. It emulates the behavior off mod+shift+j and mod+shift+k in Xmonad. movestack(+1) will swap the client with the current focus with the next client. movestack(-1) will swap the client with the current focus with the previous client.
