@@ -2047,7 +2047,7 @@ run(void)
 void
 runAutostart(void)
 {
-	system("cd ~/.config/dwm/dwm; ./init.sh &");
+	system("cd ~/.config/dwm; ./init.sh &");
 }
 
 void
