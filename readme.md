@@ -1,4 +1,3 @@
-# dwm
 ![dwm](misc/dwm.svg)
 
 dwm es mi gestor de ventanas favorito por las siguientes razones:
@@ -16,9 +15,27 @@ dwm se organiza en 3 layouts, configurables y adaptables a distintas situaciones
 
 ## tiled [t]=
 
-Es el layout por defecto. En éste, la primera ventana se inicia ocupando toda la pantalla disponible. Cuando se añade una segunda ventana, se abre en el área `master`, mientras que el resto de ventanas van ocupando el área `stack`.
+Es el layout por defecto. En éste, la primera ventana se inicia ocupando toda la pantalla disponible. Cuando se añade una segunda ventana, se abre en el área `master`, mientras que el resto de ventanas van ocupando el área `stack`. Este diseño es la razón de ser de dwm, y es el layout que utilizo el 99% de las veces.
 
 ![dwm_master_stack_layout](misc/dwm_master_stack_layout.png)
+
+![tiled_layout](misc/tiled_layout.png)
+
+Se accede a este layout mediante la combinación `M-t`
+
+## monocle [n]
+Diseño de layout práctico, que empuja la ventana enfocada al frente, mostrándose ocupando el máximo de pantalla (pantalla completa). Se puede hacer switch al resto de pantallas para ir enfocándolas.
+
+![monocle_layout](misc/monocle_layout.png)
+
+Se accede a este layout mediante la combinación `M-m`
+
+## floating >f<>
+Permite la superposición de ventanas y su movimiento y redimensión libres por la pantalla. Es el método más usado hoy día en entornos gráficos.
+
+![tiled_layout](misc/floating_layout.png)
+
+Se accede a este layout mediante la combinación `M-f`
 
 ## differences
 
