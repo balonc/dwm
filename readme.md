@@ -1,14 +1,24 @@
 # dwm
+![dwm](misc/dwm.svg)
 
-dwm is a dynamic window manager for X. It manages windows in tiled, monocle and floating layouts. All of the layouts can be applied dynamically, optimising the environment for the application in use and the task performed.
+dwm es mi gestor de ventanas favorito por las siguientes razones:
 
-In tiled layout windows are managed in a master and stacking area. The master area contains the window which currently needs most attention, whereas the stacking area contains all other windows. In monocle layout all windows are maximised to the screen size. In floating layout windows can be resized and moved freely. Dialog windows are always managed floating, regardless of the layout applied.
+- Velocidad y productividad. dwm es realmente rápido y eficiente.
+- Refleja a la perfección mi propia forma de trabajar y funcionar.
+    - No pierdo tiempo en la redimensión de ventanas, así como su colocación en el campo de la pantalla, ofreciendo prácticamente el 100% de ella.
+    - Normalmente mantengo dos ventanas, una al lado de la otra; a modo de segundo monitor.
+    - A veces quiero que una ventana ocupe toda la pantalla.
+    - Suelo emplear múltiples escritorios para distintos fines y administración de aplicaciones.
+    - Trabajo casi totalmente en terminal de comandos.
+    - Uso atajos de teclado para todo, evitando usar el ratón más que para tareas secundarias como navegar por la red.
 
-Windows are grouped by tags. Each window can be tagged with one or multiple tags. Selecting certain tags displays all windows with these tags.
+dwm se organiza en 3 layouts, configurables y adaptables a distintas situaciones:
 
-Each screen contains a small status bar which displays all available tags, the layout, the number of visible windows, the title of the focused window, and the text read from the root window name property, if the screen is focused. A floating window is indicated with an empty square and a maximised floating window is indicated with a filled square before the windows title. The selected tags are indicated with a different color. The tags of the focused window are indicated with a filled square in the top left corner. The tags which are applied to one or more windows are indicated with an empty square in the top left corner.
+## tiled [t]=
 
-dwm draws a small customizable border around windows to indicate the focus state.
+Es el layout por defecto. En éste, la primera ventana se inicia ocupando toda la pantalla disponible. Cuando se añade una segunda ventana, se abre en el área `master`, mientras que el resto de ventanas van ocupando el área `stack`.
+
+![dwm_master_stack_layout](misc/dwm_master_stack_layout.png)
 
 ## differences
 
