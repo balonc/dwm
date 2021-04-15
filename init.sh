@@ -1,6 +1,6 @@
-xrdb ~/.Xresources
+#xrdb ~/.Xresources
 xbindkeys
-unclutter &
+#unclutter &
 numlockx
 feh --bg-scale background.png
 urxvtd -q &
