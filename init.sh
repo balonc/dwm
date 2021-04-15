@@ -14,7 +14,7 @@ YELLOW="#be8700"
 WHITE="#ffffff"
 BLACK="#000000"
 
-while true; do
+while false; do
     BATT=$( acpi -b | sed 's/.*[charging|unknown], \([0-9]*\)%.*/\1/gi' )
     STATUS=$( acpi -b | sed 's/.*: \([a-zA-Z]*\),.*/\1/gi' )
     BRIGHTNESS=$( brightnessctl --device=intel_backlight g )
