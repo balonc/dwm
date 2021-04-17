@@ -1,4 +1,4 @@
-dwm - dynamic window manager
+![dwm](misc/dwm.svg)
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
 
@@ -47,12 +47,14 @@ Configuration
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
 
-Patches
+Parches usados
 -------------
 
+Parches estéticos:
 * actualfullscreen
 * titlecolor
-
-* movestack
 * noborderfloating
+
+Parches funcionales:
+* movestack
 * pertag
