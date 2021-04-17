@@ -54,3 +54,5 @@ Patches
 * titlecolor
 
 * movestack
+* noborderfloating
+* pertag
