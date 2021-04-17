@@ -1,5 +1,2 @@
 *.o
-dmenu/dmenu
-dmenu/stest
-slock/slock
 dwm
