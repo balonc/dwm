@@ -50,3 +50,7 @@ and (re)compiling the source code.
 Patches
 -------------
 
+* actualfullscreen
+* titlecolor
+
+* movestack
