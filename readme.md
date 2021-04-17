@@ -51,7 +51,7 @@ Parches usados
 -------------
 
 Parches estéticos:
-* actualfullscreen
+* [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/) Alterna la pantalla completa para una ventana, en lugar de alternar la barra de estado y el diseño *monocle*.
 * titlecolor
 * noborderfloating
 
