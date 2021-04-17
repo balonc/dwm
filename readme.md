@@ -65,7 +65,7 @@ Parches funcionales:
 Para el correcto funcionamiento del sistema, en conjunto con otras piezas de software, se iniciarán junto a *dwm* otras instrucciones en el archivo *.xinitrc*, siendo el contenido de éste:
 
 ```
-slstatus & # Inicia *suckless slstatus*, para mostrar info en la barra de estado
+slstatus &
 xbindkeys &
 unclutter -idle 3 &
 xrdb ~/.Xresources &
