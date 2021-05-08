@@ -2,12 +2,11 @@
 ============================
 dwm es un extremadamente rápido, ligero y dinámico gestor de ventanas para X.
 
-Requirements
-------------
-En orden a construir dwm necesita los archivos de cabecera de `Xlib`.
-
 Instalación
 ------------
+
+En orden a construir dwm necesita los archivos de cabecera de `Xlib`.
+
 Edite `config.mk` para localizar tu configuración local (dwm es instalado en `usr/local` por defecto).
 
 La instalación se hace primero compilando el código:
