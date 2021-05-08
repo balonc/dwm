@@ -44,8 +44,22 @@ like this in your .xinitrc:
 
 Configuration
 -------------
-The configuration of dwm is done by creating a custom config.h
-and (re)compiling the source code.
+dwm se configura mediante el archivo `config.h` y (re)compilando el código.
+
+Para el correcto funcionamiento del sistema, en conjunto con otras piezas de software, inicio junto a *dwm* otras instrucciones en el archivo *.xinitrc*, siendo el contenido de éste:
+
+```
+slstatus &
+xbindkeys &
+unclutter -idle 3 &
+xrdb ~/.Xresources &
+feh --bg-scale .background.png &
+dunst &
+xautolock -time 20 -locker slock &
+urxvtd -q &
+exec dwm > ~/.dwm.log
+```
+
 
 Parches usados
 -------------
@@ -59,22 +73,6 @@ Parches funcionales:
 * [movestack](https://dwm.suckless.org/patches/movestack/) Permite mover clientes en la pila e intercambiarlos con el maestro.
 * [pertag](https://dwm.suckless.org/patches/pertag/) Mantiene *layout*, *mwfact*, *barpos* y *nmaster* por etiqueta (*tag*).
 
-.xinitrc
--------------
-
-Para el correcto funcionamiento del sistema, en conjunto con otras piezas de software, se iniciarán junto a *dwm* otras instrucciones en el archivo *.xinitrc*, siendo el contenido de éste:
-
-```
-slstatus &
-xbindkeys &
-unclutter -idle 3 &
-xrdb ~/.Xresources &
-feh --bg-scale .background.png &
-dunst &
-xautolock -time 20 -locker slock &
-urxvtd -q &
-exec dwm > ~/.dwm.log
-```
 
 Cómo usar dwm
 -------------
