@@ -6,15 +6,25 @@ Requirements
 ------------
 In order to build dwm you need the Xlib header files.
 
-Installation
+Instalación
 ------------
-Edit config.mk to match your local setup (dwm is installed into
-the /usr/local namespace by default).
+Edite `config.mk` para localizar tu configuración local (dwm es instalado en `usr/local` por defecto).
 
-Afterwards enter the following command to build and install dwm (if
-necessary as root):
+La instalación se hace primero compilando el código:
 
-    make clean install
+    make
+
+Y después, con los privilegios adecuados si procede, instalándolo en la ruta configurada:
+
+    sudo make install
+
+Para limpiar de archivos compilados, se ejecuta:
+
+    make clean
+
+Para desinstalar el código del sistema:
+
+    sudo make uninstall
 
 Configuración
 -------------
