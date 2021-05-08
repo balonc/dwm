@@ -42,7 +42,7 @@ like this in your .xinitrc:
     exec dwm
 
 
-Configuration
+Configuración
 -------------
 dwm se configura mediante el archivo `config.h` y (re)compilando el código.
 
