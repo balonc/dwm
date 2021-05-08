@@ -75,3 +75,7 @@ xautolock -time 20 -locker slock &
 urxvtd -q &
 exec dwm > ~/.dwm.log
 ```
+
+Cómo usar dwm
+-------------
+Basado en el artículo (Dave's Visual Guide to dwm)[https://ratfactor.com/dwm].
