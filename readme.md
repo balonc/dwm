@@ -1,6 +1,6 @@
 ![dwm](misc/dwm.svg)
 ============================
-dwm is an extremely fast, small, and dynamic window manager for X.
+dwm es un extremadamente rápido, ligero y dinámico gestor de ventanas para X.
 
 Requirements
 ------------
