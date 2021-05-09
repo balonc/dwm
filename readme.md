@@ -151,3 +151,33 @@ Mod1-h - decrease master area size - make the master area physically smaller.
 Mod1-Return - zoom - toggle window between the master and stack areas: if the focused window is in the stack, it is moved to the master area and the previous master window is put at the top of the stack; or if the focused window is in the master area, it is put on the stack.
 
 ![zoom](misc/zoom.png)
+
+#### Tags
+
+If you’re used to the concept of multiple desktops or virtual desktops, this gives you the same functionality, but with more flexibility. A tag is like a desktop in that it can view a specific set of windows you have open. A tag is unlike a desktop in that a window may belong to more than one tag and you can even view all tags at once. It’s very simple in practice and you only need to learn a few key combinations:
+
+Mod1-Shift-[1..n] - apply tag to window - assigns the tag number to the currently-focused window (like moving a window to a different desktop).
+
+    Example: Alt-Shift-2 assigns the tag '2' to the current window. If you’re currently viewing, say, tag '1', this will make the window disappear until you view tag '2'.
+
+![assign_window_tag](misc/assign_window_tag.png)
+
+Mod1-[1..n] - view tag - displays all windows with tag number (like viewing a particular desktop).
+
+    Example: Alt-2 displays all windows assigned to tag '2'.
+
+![view_tagged_windows](misc/view_tagged_windows.png)
+
+Mod1-Tab - toggle tags - this is like switching between the two most recent desktops.
+
+Mod1-Shift-0 - apply all tags to window - this is like saying "put this window on all desktops."
+
+![assign_all_window_tags](misc/assign_all_window_tags.png)
+
+Mod1-Control-Shift-[1..n] - toggle tag n - this adds or removes the tag number for the focused window (like adding or removing the window from a particular desktop).
+
+Mod1-0 - view all windows - regardless of tag (like viewing all desktops at once).
+
+![view_all_windows](misc/view_all_windows.png)
+
+Mod1-Control-[1..n] - banish tags - Add/remove all windows with nth tag to/from the view (only makes sense in the context of the above option of viewing all windows).
