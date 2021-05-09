@@ -129,3 +129,25 @@ Mod1-k - focus previous window - in the tiled layout, this goes in counter/anti-
 or floating:
 
 ![focus_prev_floating](misc/focus_prev_floating.png)
+
+#### Tiled layout shortcuts
+
+Mod1-i - increment master - increase the number of split windows in the master area (will move windows (if any) out of the stacking area as needed).
+
+![master_increase](misc/master_increase.png)
+
+Mod1-d - decrement master - decrease the number of split windows in the master area (will move windows (if any) back to the stacking area as needed).
+
+![master_decrease](misc/master_decrease.png)
+
+Mod1-l - increase master area size - make the master area physically larger.
+
+![master_bigger](misc/master_bigger.png)
+
+Mod1-h - decrease master area size - make the master area physically smaller.
+
+![master_smaller](misc/master_smaller.png)
+
+Mod1-Return - zoom - toggle window between the master and stack areas: if the focused window is in the stack, it is moved to the master area and the previous master window is put at the top of the stack; or if the focused window is in the master area, it is put on the stack.
+
+![zoom](misc/zoom.png)
