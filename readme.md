@@ -181,3 +181,7 @@ Mod1-0 - view all windows - regardless of tag (like viewing all desktops at once
 ![view_all_windows](misc/view_all_windows.png)
 
 Mod1-Control-[1..n] - banish tags - Add/remove all windows with nth tag to/from the view (only makes sense in the context of the above option of viewing all windows).
+
+#### Quitting dwm
+
+Mod1-Shift-q - quit dwm - You shall return whence you came!
