@@ -203,3 +203,17 @@ Mod1-Button1 - move window - Hold and drag to move the window. If the window was
 Mod1-Button2 - toggle layout - toggles the focused window between the floating and tiled state.
 
 Mod1-Button3 - resize window - Hold and drag to resize the window. As with moving, if the window was tiled, it will be floated.
+
+#### Screens
+
+When I originally made this guide, I didn’t use multiple monitors on my Linux desktop, so I didn’t create graphics for these shortcuts. However, I’ve been using dwm with multiple monitors for years now and it works great!
+
+Mod1-, - focus previous screen
+
+Mod1-. - focus next screen
+
+Mod1-Shift-, - send window to previous screen
+
+Mod1-Shift-. - send window to next screen
+
+(If you just have two monitors, you’ll only need to memorize "previous" OR "next". Having both is only useful for three or more monitors.)
