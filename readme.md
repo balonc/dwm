@@ -185,3 +185,9 @@ Mod1-Control-[1..n] - banish tags - Add/remove all windows with nth tag to/from 
 #### Quitting dwm
 
 Mod1-Shift-q - quit dwm - You shall return whence you came!
+
+#### Toggle the top bar
+
+Mod1-b - toggle the top bar - It is like a magic appearing/disappearing act! What fun!
+
+![toggle_bar](misc/toggle_bar.png)
