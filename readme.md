@@ -70,3 +70,24 @@ La ventana creada comienza a pantalla completa. A medida que se agregan ventanas
 
 ![dwm_master_stack_layout](misc/dwm_master_stack_layout.png)
 
+#### Layout keybindings
+
+Mod1-t - tiled layout - re-arranges windows into the dynamically-tiled master/stack configuration (if not already).
+
+![tiled_layout](misc/tiled_layout.png)
+
+Mod1-m - monocle layout - very handy, single window fullscreen layout - whichever window is focused is pushed to the front and viewed fullscreen. Switch windows by focusing them (see below).
+
+![monocle_layout](misc/monocle_layout.png)
+
+Mod1-f - floating layout - allows windows to overlap and be moved and sized manually.
+
+    Note: nothing will appear to change when you switch to floating layout since all windows will still have the same size and position.
+
+![floating_layout](misc/floating_layout.png)
+
+Mod1-space - toggle layouts - this toggles between the most current two layouts.
+
+Mod1-Shift-space - toggle window layout - for the focused window, this toggles between tiled and floating states.
+
+![toggle_window_floating](misc/toggle_window_floating.png)
