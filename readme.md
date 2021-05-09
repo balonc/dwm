@@ -62,8 +62,11 @@ Basado en el artículo [Dave's Visual Guide to dwm](https://ratfactor.com/dwm).
 
 La tecla principal, de ahora en adelante `X`, es `Mod4`. Cabe destacar que, por defecto en el sistema de suckless es `Mod1` (`Alt`).
 
-## Layouts
+### Layouts
 
-### Tiled
+#### Tiled
 
 La ventana creada comienza a pantalla completa. A medida que se agregan ventanas, se abren en el área `master` (zona izquierda); mientras que las más antiguas se empujan al área `stack`(zona derecha, apiladas).
+
+![dwm_master_stack_layout](misc/dwm_master_stack_layout.png)
+
