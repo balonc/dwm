@@ -91,3 +91,23 @@ Mod1-space - toggle layouts - this toggles between the most current two layouts.
 Mod1-Shift-space - toggle window layout - for the focused window, this toggles between tiled and floating states.
 
 ![toggle_window_floating](misc/toggle_window_floating.png)
+
+#### Opening and closing windows
+
+By default, there are two ways to open a new window: open an st terminal or run dmenu. Both of these are separate applictions which were constructed specifically to work with dwm. I like them both. Here are the default keybindings for each:
+
+Mod1-Shift-return - open terminal - this specifically opens st, if you want it to open another terminal, you’ll need to customize config.h.
+
+![new_term](misc/new_term.png)
+
+
+
+Mod1-p - open dmenu - runs the tiny dynamic menu called dmenu in dwm’s top bar.
+
+    I really like dmenu. It lets you find available applications by typing parts of their names. For example, to launch Firefox on my system, I just press Alt-p, type fire (though just fir is all I need) and hit return.
+
+To close a window, you can either quit it from within the application, or tell dwm to close the window with this keybinding:
+
+Mod1-Shift-c - close focused window
+
+![close_window](misc/close_window.png)
