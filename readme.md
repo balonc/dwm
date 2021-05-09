@@ -111,3 +111,21 @@ To close a window, you can either quit it from within the application, or tell d
 Mod1-Shift-c - close focused window
 
 ![close_window](misc/close_window.png)
+
+#### Switching window focus
+
+Mod1-j - focus next window - in the tiled layout, this goes in clockwise order.
+
+![focus_next_tiled](misc/focus_next_tiled.png)
+
+or floating:
+
+![focus_next_floating](misc/focus_next_floating.png)
+
+Mod1-k - focus previous window - in the tiled layout, this goes in counter/anti-clockwise order.
+
+![focus_prev_tiled](misc/focus_prev_tiled.png)
+
+or floating:
+
+![focus_prev_floating](misc/focus_prev_floating.png)
