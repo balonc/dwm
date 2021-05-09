@@ -191,3 +191,15 @@ Mod1-Shift-q - quit dwm - You shall return whence you came!
 Mod1-b - toggle the top bar - It is like a magic appearing/disappearing act! What fun!
 
 ![toggle_bar](misc/toggle_bar.png)
+
+#### Mousing around
+
+I’ll be the first to admit that the mouse has its place. Sometimes you just have to click on a floating window and drag it away to paradise. dwm handles this intuitively (once you know to hold down the Mod1 key).
+
+![mouse_controls](misc/mouse_controls.png)
+
+Mod1-Button1 - move window - Hold and drag to move the window. If the window was tiled, it will be floated (the rest of the layout will remain tiled - it’s the best of both worlds!)
+
+Mod1-Button2 - toggle layout - toggles the focused window between the floating and tiled state.
+
+Mod1-Button3 - resize window - Hold and drag to resize the window. As with moving, if the window was tiled, it will be floated.
